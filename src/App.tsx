@@ -6,6 +6,8 @@ function App() {
     return (
         <div className="App">
             <Todolist title="My Todo"/>
+            <Todolist title="Second"/>
+            <Todolist title="Third"/>
         </div>
     );
 }
