@@ -21,7 +21,8 @@ function App() {
     if (filter === "completed") {
         tasksForTodolist = tasks.filter(el => el.isDone === true)
     }
-    function changeFilter(value:FilterValuesType){
+
+    function changeFilter(value: FilterValuesType) {
         setFilter(value)
     }
 
@@ -30,9 +31,10 @@ function App() {
         setTasks(FilteredTasks)
 
     }
-    function addTask(title:string) {
-        let task = {id:v1(), title: title, isDone: false};
-        let newTasks =[task, ...tasks]
+
+    function addTask(title: string) {
+        let task = {id: v1(), title: title, isDone: false};
+        let newTasks = [task, ...tasks]
         setTasks(newTasks)
     }
 

@@ -27,7 +27,7 @@ export const Todolist = (props: PropsType) => {
             <div>
                 <input value={title}
                        onChange={e => setTitle(e.currentTarget.value)}
-                       onKeyDown={(e )=> {
+                       onKeyDown={(e) => {
                            if (e.key === "Enter") {
                                addTask()
                            }
