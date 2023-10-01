@@ -37,7 +37,7 @@ function App() {
         setTodolists(todolists.map(el => el.id === todolistId ? {...el, filter: value} : el))
     }
 
-    function removeTask(id: string, todolistId:string) {
+    function removeTask(id: string, todolistId: string) {
         // let FilteredTasks = tasks.filter(el => el.id != id)
         // setTasks(FilteredTasks)
 
@@ -61,12 +61,12 @@ function App() {
     return (
         <div className="App">
             {todolists.map(el => {
-                let tasksForTodolist = tasks
+                let tasksForTodolist = tasks[el.id]
                 if (el.filter === "active") {
-                    tasksForTodolist = tasks.filter(el => el.isDone === false)
+                    tasksForTodolist = tasks[el.id].filter(el => el.isDone === false)
                 }
                 if (el.filter === "completed") {
-                    tasksForTodolist = tasks.filter(el => el.isDone === true)
+                    tasksForTodolist = tasks[el.id].filter(el => el.isDone === true)
                 }
                 return (
                     <Todolist

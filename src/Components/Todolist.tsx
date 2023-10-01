@@ -1,8 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 
 import {FilterValuesType} from "../App";
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
+
 
 type TaskType = {
     id: string
@@ -14,7 +13,7 @@ type PropsType = {
     id: string
     title: string
     task: TaskType[]
-    removeTask: (taskId: string, todolistId:string) => void
+    removeTask: (taskId: string, todolistId: string) => void
     changeFilter: (todolistId: string, value: FilterValuesType) => void
     addTask: (title: string) => void
     changeTaskStatus: (id: string, isDone: boolean) => void
