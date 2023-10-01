@@ -45,17 +45,22 @@ function App() {
             setTasks([...tasks])
         }
     }
-
+    const newArr= [1,2,3]
     return (
         <div className="App">
-            <Todolist title="My Todo"
-                      task={tasksForTodolist}
-                      removeTask={removeTask}
-                      changeFilter={changeFilter}
-                      addTask={addTask}
-                      changeTaskStatus={changeTaskStatus}
-                      filter={filter}
-            />
+            {newArr.map(el=>{
+                return(
+                    <Todolist title="My Todo"
+                              task={tasksForTodolist}
+                              removeTask={removeTask}
+                              changeFilter={changeFilter}
+                              addTask={addTask}
+                              changeTaskStatus={changeTaskStatus}
+                              filter={filter}
+                    />
+                )
+            })}
+
 
         </div>
     );
