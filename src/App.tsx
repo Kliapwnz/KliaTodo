@@ -26,7 +26,6 @@ function App() {
     // let [filter, setFilter] = useState<FilterValuesType>("all")
 
 
-
     function changeFilter(value: FilterValuesType) {
         // setFilter(value)
     }
