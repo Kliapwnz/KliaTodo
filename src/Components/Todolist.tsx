@@ -21,7 +21,7 @@ type PropsType = {
 
 export const Todolist = (props: PropsType) => {
     let [title, setTitle] = useState("")
-    let [error, setError] = useState(null)
+    let [error, setError] = useState<string | null>(null)
 
     const addTask = () => {
         if(title.trim() !== "") {
