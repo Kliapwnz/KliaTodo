@@ -21,6 +21,9 @@ export const Todolist = (props: PropsType) => {
     let [title, setTitle] = useState("")
 
     const addTask = () => {
+        if(title === "") {
+            return
+        }
         props.addTask(title)
         setTitle("")
     }
