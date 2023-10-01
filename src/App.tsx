@@ -23,11 +23,8 @@ function App() {
         {id: v1(), title: "What", isDone: false}
     ],)
 
-    // let [filter, setFilter] = useState<FilterValuesType>("all")
-
-
-    function changeFilter(value: FilterValuesType) {
-        // setFilter(value)
+    function changeFilter(todolistId: string, value: FilterValuesType) {
+        setTodolists(todolists.map(el => el.id === todolistId ? {...el, filter: value} : el))
     }
 
     function removeTask(id: string) {
@@ -64,6 +61,7 @@ function App() {
                 return (
                     <Todolist
                         key={el.id}
+                        id={el.id}
                         title={el.title}
                         task={tasksForTodolist}
                         removeTask={removeTask}
