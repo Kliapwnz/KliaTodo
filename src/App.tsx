@@ -37,6 +37,13 @@ function App() {
         let newTasks = [task, ...tasks]
         setTasks(newTasks)
     }
+    function changeTaskStatus (id:string, isDone:boolean) {
+        let task = tasks.find(el => el.id === id)
+        if (task) {
+            task.isDone = isDone;
+            setTasks([...tasks])
+        }
+    }
 
     return (
         <div className="App">
@@ -45,6 +52,7 @@ function App() {
                       removeTask={removeTask}
                       changeFilter={changeFilter}
                       addTask={addTask}
+                      changeTaskStatus={changeTaskStatus}
             />
 
         </div>
