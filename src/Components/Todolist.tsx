@@ -1,6 +1,8 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 
 import {FilterValuesType} from "../App";
+import {Simulate} from "react-dom/test-utils";
+import error = Simulate.error;
 
 type TaskType = {
     id: string
@@ -50,10 +52,10 @@ export const Todolist = (props: PropsType) => {
                 <input value={title}
                        onChange={onChangeHandler}
                        onKeyDown={onKeyDownHandler}
-                       className="error"
+                       className={error ? "error" : ""}
                 />
                 <button onClick={addTask}>+</button>
-                <div className="error-message">Field is required</div>
+                {error && <div className="error-message">{error}</div>}
             </div>
             <ul>
                 {props.task.map(el => {
