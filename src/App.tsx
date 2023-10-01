@@ -4,11 +4,12 @@ import {Todolist} from "./Components/Todolist";
 import {v1} from "uuid";
 
 export type FilterValuesType = "all" | "active" | "completed"
-type TodolistsType={
-    id:string,
-    title:string
-    filter:FilterValuesType
+type TodolistsType = {
+    id: string,
+    title: string
+    filter: FilterValuesType
 }
+
 function App() {
     let [tasks, setTasks] = useState([
         {id: v1(), title: "HTML&CSS", isDone: true},
@@ -49,15 +50,16 @@ function App() {
             setTasks([...tasks])
         }
     }
-    let [todolists, setTodolists]=useState<Array<TodolistsType>>([
-        {id:v1(), title:"What to learn", filter:"all"},
-        {id:v1(), title:"What to buy", filter:"all"}
+
+    let [todolists, setTodolists] = useState<Array<TodolistsType>>([
+            {id: v1(), title: "What to learn", filter: "all"},
+            {id: v1(), title: "What to buy", filter: "completed"}
         ]
     )
     return (
         <div className="App">
-            {todolists.map(el=>{
-                return(
+            {todolists.map(el => {
+                return (
                     <Todolist title={el.title}
                               task={tasksForTodolist}
                               removeTask={removeTask}
