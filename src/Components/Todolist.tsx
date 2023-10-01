@@ -35,6 +35,7 @@ export const Todolist = (props: PropsType) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setTitle(e.currentTarget.value)
     const onKeyDownHandler = ((e: KeyboardEvent<HTMLInputElement>) => {
+        setError("")
         if (e.key === "Enter") {
             addTask()
         }
