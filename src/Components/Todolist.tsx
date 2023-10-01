@@ -51,10 +51,13 @@ export const Todolist = (props: PropsType) => {
     const onCompletedClickHandler = () => {
         props.changeFilter(props.id, "completed")
     }
+    const removeTodolistHandler = () =>{
+        props.removeTodolist(props.id)
+    }
     return (
         <div>
             <h3>{props.title}
-                <button onClick={()=>{}}>X</button>
+                <button onClick={removeTodolistHandler}>X</button>
             </h3>
             <div>
                 <input value={title}

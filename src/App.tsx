@@ -49,8 +49,9 @@ function App() {
     function changeTaskStatus(todolistId: string, id: string, isDone: boolean) {
         setTasks({...tasks, [todolistId]: tasks[todolistId].map(el => el.id === id ? {...el, isDone: isDone} : el)})
     }
-function removeTodolist  (todolistId: string) {
 
+    function removeTodolist(todolistId: string) {
+        setTodolists(todolists.filter(el => el.id !== todolistId))
     }
 
     return (
