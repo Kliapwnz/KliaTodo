@@ -24,11 +24,13 @@ export const Todolist = (props: PropsType) => {
     let [error, setError] = useState(null)
 
     const addTask = () => {
-        if(title.trim() === "") {
-            return
+        if(title.trim() !== "") {
+            props.addTask(title.trim())
+            setTitle("")
+        } else {
+            setError("Title is required")
         }
-        props.addTask(title.trim())
-        setTitle("")
+
     }
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setTitle(e.currentTarget.value)
