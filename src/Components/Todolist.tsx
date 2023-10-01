@@ -16,7 +16,7 @@ type PropsType = {
     removeTask: (taskId: string) => void
     changeFilter: (value: FilterValuesType) => void
     addTask: (title: string) => void
-    changeTaskStatus:(id:string, isDone:boolean) => void
+    changeTaskStatus: (id: string, isDone: boolean) => void
 }
 
 export const Todolist = (props: PropsType) => {
@@ -24,7 +24,7 @@ export const Todolist = (props: PropsType) => {
     let [error, setError] = useState<string | null>(null)
 
     const addTask = () => {
-        if(title.trim() !== "") {
+        if (title.trim() !== "") {
             props.addTask(title.trim())
             setTitle("")
         } else {
@@ -64,7 +64,7 @@ export const Todolist = (props: PropsType) => {
             <ul>
                 {props.task.map(el => {
                     const onClickHandler = () => props.removeTask(el.id)
-                    const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) => {
+                    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
                         let newIsDone = e.currentTarget.checked
                         props.changeTaskStatus(el.id, newIsDone)
                     }
