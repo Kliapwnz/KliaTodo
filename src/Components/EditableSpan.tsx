@@ -8,7 +8,7 @@ export const EditableSpan = (props: PropsType) => {
     const [edit, setEdit] = useState(false)
     return (
         edit
-            ? <input/>
+            ? <input value={props.title}/>
             : <span>{props.title}</span>
 
     )
