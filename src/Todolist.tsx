@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState, KeyboardEvent} from 'react';
 import {FilterValuesType} from './App';
+import {AddItemForm} from "./AddItemForm";
 
 export type TaskType = {
     id: string
@@ -30,7 +31,7 @@ export function Todolist(props: PropsType) {
         <h3> {props.title}
             <button onClick={removeTodolist}>x</button>
         </h3>
-
+        <AddItemForm/>
         <ul>
             {
                 props.tasks.map(t => {
