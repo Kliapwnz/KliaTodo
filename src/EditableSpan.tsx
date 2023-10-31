@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
 
 type PropsType = {
-    title: string
+    oldTitle: string
 }
 
 export const EditableSpan = (props: PropsType) => {
     const [edit, setEdit] = useState(false)
-    const [title, setTitle] = useState(props.title)
+    const [newTitle, setNewTitle] = useState(props.oldTitle)
     const editHandler = () => {
         setEdit(!edit)
     }
     return (
         edit
-            ? <input value={props.title} onBlur={editHandler} autoFocus/>
+            ? <input value={props.oldTitle} onBlur={editHandler} autoFocus/>
 
-            : <span onDoubleClick={editHandler}>{props.title}</span>
+            : <span onDoubleClick={editHandler}>{props.oldTitle}</span>
 
     );
 };
