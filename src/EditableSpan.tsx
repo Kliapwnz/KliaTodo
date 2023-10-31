@@ -10,7 +10,7 @@ export const EditableSpan = (props: PropsType) => {
     const [newTitle, setNewTitle] = useState(props.oldTitle)
     const editHandler = () => {
         setEdit(!edit)
-        if(edit){
+        if (edit) {
             addTask()
         }
 
@@ -18,7 +18,7 @@ export const EditableSpan = (props: PropsType) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setNewTitle(e.currentTarget.value)
     }
-    const addTask = () =>{
+    const addTask = () => {
         props.onClick(newTitle)
     }
     return (

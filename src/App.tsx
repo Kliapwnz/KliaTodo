@@ -92,9 +92,10 @@ function App() {
         setTodolists([newTodolist, ...todolists])
         setTasks({...tasks, [newTodolistId]: []})
     }
-const updateTask =(todolistId:string,taskID:string, newTitle:string)=>{
 
-}
+    const updateTask = (todolistId: string, taskID: string, newTitle: string) => {
+
+    }
 
     return (
         <div className="App">
