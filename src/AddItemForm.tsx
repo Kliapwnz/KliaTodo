@@ -1,6 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import Button from '@mui/material/Button';
+import IconButton from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import AddBox from "@mui/icons-material/AddBox";
 
 type PropsType = {
     addItem: (title: string) => void
@@ -47,10 +48,11 @@ export const AddItemForm = (props: PropsType) => {
                 label={error ? error : ""}
                 error={!!error}
             />
-            <Button variant="contained"
+            <IconButton variant="contained"
                     style={stylesButton}
-                    onClick={addItem}>+</Button>
-            {error && <div className="error-message">{error}</div>}
+                    onClick={addItem}>
+                <AddBox/>
+            </IconButton>
         </div>
     );
 };
