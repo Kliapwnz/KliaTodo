@@ -44,7 +44,7 @@ export const AddItemForm = (props: PropsType) => {
                 value={title}
                 onChange={onChangeHandler}
                 onKeyPress={onKeyPressHandler}
-                label="Title"
+                label={error ? error : ""}
                 error={!!error}
             />
             <Button variant="contained"
