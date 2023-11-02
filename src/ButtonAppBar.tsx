@@ -29,7 +29,7 @@ export function ButtonAppBar() {
     };
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{flexGrow: 1}}>
             <FormGroup>
                 <FormControlLabel
                     control={
@@ -49,11 +49,11 @@ export function ButtonAppBar() {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        sx={{mr: 2}}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
                         My Todolist
                     </Typography>
                     {auth && (
@@ -66,7 +66,7 @@ export function ButtonAppBar() {
                                 onClick={handleMenu}
                                 color="inherit"
                             >
-                                <AccountCircle />
+                                <AccountCircle/>
                             </IconButton>
                             <Menu
                                 id="menu-appbar"

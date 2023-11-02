@@ -49,8 +49,8 @@ export const AddItemForm = (props: PropsType) => {
                 error={!!error}
             />
             <IconButton variant="contained"
-                    style={stylesButton}
-                    onClick={addItem}>
+                        style={stylesButton}
+                        onClick={addItem}>
                 <AddBox/>
             </IconButton>
         </div>
