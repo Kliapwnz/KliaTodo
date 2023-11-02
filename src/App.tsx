@@ -100,7 +100,7 @@ function App() {
         })
     }
     const updateTodolist = (todolistId: string, newTitle: string) => {
-
+        setTodolists(todolists.map(el => el.id ? {...el, title: newTitle} : el))
     }
 
     return (
