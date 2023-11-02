@@ -33,7 +33,7 @@ export const AddItemForm = (props: PropsType) => {
         maxWidth: '30px',
         maxHeight: '30px',
         minWidth: '30px',
-        minHeight: '30px'
+        minHeight: '30px',
     }
     return (
         <div>
