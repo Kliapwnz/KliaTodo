@@ -29,6 +29,12 @@ export const AddItemForm = (props: PropsType) => {
             addItem();
         }
     }
+    const stylesButton = {
+        maxWidth: '30px',
+        maxHeight: '30px',
+        minWidth: '30px',
+        minHeight: '30px'
+    }
     return (
         <div>
             <input value={title}
@@ -36,9 +42,8 @@ export const AddItemForm = (props: PropsType) => {
                    onKeyPress={onKeyPressHandler}
                    className={error ? "error" : ""}
             />
-            {/*<button onClick={addItem}>+</button>*/}
             <Button variant="contained"
-                    style={{maxWidth: '30px', maxHeight: '30px', minWidth: '30px', minHeight: '30px'}}
+                    style={stylesButton}
                     onClick={addItem}>+</Button>
             {error && <div className="error-message">{error}</div>}
         </div>
