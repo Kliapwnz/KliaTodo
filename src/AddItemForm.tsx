@@ -38,6 +38,7 @@ export const AddItemForm = (props: PropsType) => {
             />
             {/*<button onClick={addItem}>+</button>*/}
             <Button variant="contained"
+                    size="small"
                     onClick={addItem}>+</Button>
             {error && <div className="error-message">{error}</div>}
         </div>
