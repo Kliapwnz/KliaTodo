@@ -31,14 +31,15 @@ export const AddItemForm = (props: PropsType) => {
         }
     }
     const stylesButton = {
-        maxWidth: '30px',
-        maxHeight: '30px',
-        minWidth: '30px',
-        minHeight: '30px',
+        maxWidth: '38px',
+        maxHeight: '38px',
+        minWidth: '38px',
+        minHeight: '38px',
     }
     return (
         <div>
             <TextField
+                size="small"
                 variant="outlined"
                 value={title}
                 onChange={onChangeHandler}
