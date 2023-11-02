@@ -1,4 +1,5 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
+import Button from '@mui/material/Button';
 
 type PropsType = {
     addItem: (title: string) => void
@@ -8,7 +9,7 @@ export const AddItemForm = (props: PropsType) => {
     let [title, setTitle] = useState("")
     let [error, setError] = useState<string | null>(null)
 
-    const addTask = () => {
+    const addItem = () => {
         let newTitle = title.trim();
         if (newTitle !== "") {
             props.addItem(newTitle);
@@ -25,7 +26,7 @@ export const AddItemForm = (props: PropsType) => {
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         setError(null);
         if (e.charCode === 13) {
-            addTask();
+            addItem();
         }
     }
     return (
@@ -35,7 +36,9 @@ export const AddItemForm = (props: PropsType) => {
                    onKeyPress={onKeyPressHandler}
                    className={error ? "error" : ""}
             />
-            <button onClick={addTask}>+</button>
+            {/*<button onClick={addItem}>+</button>*/}
+            <Button variant="contained"
+                    onClick={addItem}>+</Button>
             {error && <div className="error-message">{error}</div>}
         </div>
     );
