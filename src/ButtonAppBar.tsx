@@ -39,7 +39,7 @@ export function ButtonAppBar() {
                             aria-label="login switch"
                         />
                     }
-                    label={auth ? 'Logout' : 'Login'}
+                    label={auth ? 'Click' : 'Click!'}
                 />
             </FormGroup>
             <AppBar position="static">
@@ -54,7 +54,7 @@ export function ButtonAppBar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Photos
+                        My Todolist
                     </Typography>
                     {auth && (
                         <div>
