@@ -68,39 +68,41 @@ function App() {
         // }
 
     }
-        //
-        //
+
+    //
+    //
 
 
-        function changeFilter(value: FilterValuesType) {
-           
-        }
-
-
-        return (
-            <div className="App">
-
-                {todolists.map(el => {
-                    let tasksForTodolist = tasks[el.id]
-                    if (el.filter === "active") {
-                        tasksForTodolist = tasks[el.id].filter(t => !t.isDone);
-                    }
-                    if (el.filter === "completed") {
-                        tasksForTodolist = tasks[el.id].filter(t => t.isDone);
-                    }
-                    return (
-                        <Todolist
-                            todolistId={el.id}
-                            title={el.title}
-                            tasks={tasksForTodolist}
-                            removeTask={removeTask}
-                            addTask={addTask}
-                            changeTaskStatus={changeStatus}
-                            changeFilter={changeFilter}
-                            filter={el.filter}/>)
-                })}
-            </div>
-        );
+    function changeFilter(todolistID: string, value: FilterValuesType) {
+        setTodolists(todolists.map(el => el.id === todolistID ? {...el, filter: value} : el))
     }
 
-    export default App;
+
+    return (
+        <div className="App">
+
+            {todolists.map(el => {
+                let tasksForTodolist = tasks[el.id]
+                if (el.filter === "active") {
+                    tasksForTodolist = tasks[el.id].filter(t => !t.isDone);
+                }
+                if (el.filter === "completed") {
+                    tasksForTodolist = tasks[el.id].filter(t => t.isDone);
+                }
+                return (
+                    <Todolist
+                        key={el.id}
+                        todolistId={el.id}
+                        title={el.title}
+                        tasks={tasksForTodolist}
+                        removeTask={removeTask}
+                        addTask={addTask}
+                        changeTaskStatus={changeStatus}
+                        changeFilter={changeFilter}
+                        filter={el.filter}/>)
+            })}
+        </div>
+    );
+}
+
+export default App;
