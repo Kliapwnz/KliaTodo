@@ -64,7 +64,7 @@ function App() {
         //
         setTasks({
             ...tasks,
-            [todolistID]: tasks[todolistID].map(el => el.id === taskId ? {...el, isDone: isDone} : el)
+            [todolistID]: tasks[todolistID].map(el => el.id === taskId ? {...el, isDone} : el)
         });
         // }
 
