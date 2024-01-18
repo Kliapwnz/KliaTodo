@@ -14,22 +14,9 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div><NavLink
-                        to="/pageOne"
-                        className={({isActive}) => isActive ? styles.active : styles.navLink}
-
-                    >
-                        Adidas</NavLink></div>
-                    <div><NavLink
-                        to="/pageTwo"
-                        className={({isActive}) => isActive ? styles.active : styles.navLink}
-                    >
-                        Puma</NavLink></div>
-                    <div><NavLink
-                        to={"/PageThree"}
-                        className={({isActive}) => isActive ? styles.active : styles.navLink}
-                    >
-                        Abibas</NavLink></div>
+                    <div><NavLink to="/pageOne">Adidas</NavLink></div>
+                    <div><NavLink to="/pageTwo">Puma</NavLink></div>
+                    <div><NavLink to={"/PageThree"}>Abibas</NavLink></div>
                 </div>
                 <div className={styles.content}>
                     <Routes>
