@@ -14,9 +14,9 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div><NavLink to="/pageOne">Adidas</NavLink></div>
-                    <div><NavLink to="/pageTwo">Puma</NavLink></div>
-                    <div><NavLink to={"/PageThree"}>Abibas</NavLink></div>
+                    <NavWrapper><NavLink to="/pageOne">Adidas</NavLink></NavWrapper>
+                    <NavWrapper><NavLink to="/pageTwo">Puma</NavLink></NavWrapper>
+                    <NavWrapper><NavLink to={"/PageThree"}>Abibas</NavLink></NavWrapper>
                 </div>
                 <div className={styles.content}>
                     <Routes>
