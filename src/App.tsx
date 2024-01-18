@@ -13,7 +13,7 @@ const PATH = {
     PAGE2: "pageTwo",
     PAGE3: "PageThree",
     ERROR404: "error404"
-}
+} as const
 
 function App() {
     return (
@@ -33,8 +33,8 @@ function App() {
                         <Route path={PATH.PAGE2} element={<PageTwo/>}/>
                         <Route path={PATH.PAGE3} element={<PageThree/>}/>
 
-                        <Route path={PATH.ERROR404} element={<Error404/>}/>
-                        <Route path="/*" element={<Navigate to={PATH.ERROR404}/>}/>
+                        {/*<Route path={PATH.ERROR404} element={<Error404/>}/>*/}
+                        <Route path="/*" element={<Error404/>} />
                     </Routes>
                 </div>
             </div>
