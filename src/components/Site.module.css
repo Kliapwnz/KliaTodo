@@ -40,5 +40,5 @@
 }
 .nav a.active {
     color: lime;
-    text-decoration: underline;
+    text-decoration: none;
 }
