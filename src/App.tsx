@@ -19,8 +19,10 @@ function App() {
                     <Routes>
                         <Route path={"/"} element={<Navigate to={"/pageOne"}/>}/>
                         <Route path="/pageOne" element={<PageOne/>}/>
+
                         <Route path="/pageTwo" element={<PageTwo/>}/>
                         <Route path="/PageThree" element={<PageThree/>}/>
+
                         <Route path="/error404" element={<Error404/>}/>
                         <Route path="/*" element={<Navigate to={"/error404"}/>}/>
                     </Routes>
