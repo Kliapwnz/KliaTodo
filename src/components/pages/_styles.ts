@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
  const NavWrapper = styled.div`
   margin-left: 10px;
   font-size: 20px;
