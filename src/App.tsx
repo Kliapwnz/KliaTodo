@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import styles from "./components/Site.module.css";
+import {PageOne} from "./components/pages/PageOne";
+import {PageTwo} from "./components/pages/PageTwo";
+import {PageThree} from "./components/pages/PageThree";
+import {Error404} from "./components/pages/Error404";
 
 
 function App() {
@@ -11,7 +15,10 @@ function App() {
                     Здесь будет навигация
                 </div>
                 <div className={styles.content}>
-                    Здесь будут кроссовки
+                    <PageOne/>
+                    <PageTwo/>
+                    <PageThree/>
+                    <Error404/>
                 </div>
             </div>
             <div className={styles.footer}>abibas 2023</div>
