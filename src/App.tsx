@@ -4,6 +4,7 @@ import {PageOne} from "./components/pages/PageOne";
 import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
+import {Routes} from "react-router-dom";
 
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
                     Здесь будет навигация
                 </div>
                 <div className={styles.content}>
-                    <PageOne/>
-                    <PageTwo/>
-                    <PageThree/>
+                    <Routes>
+                        <PageOne/>
+                        <PageTwo/>
+                        <PageThree/>
+                    </Routes>
                 </div>
             </div>
             <div className={styles.footer}>abibas 2023</div>
