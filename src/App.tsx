@@ -4,7 +4,7 @@ import {PageOne} from "./components/pages/PageOne";
 import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    Здесь будет навигация
+                    <div><NavLink to={"/pageOne"}>Adidas</NavLink></div>
+                    <div><NavLink to={"/pageTwo"}>Puma</NavLink></div>
+                    <div><NavLink to={"/PageThree"}>Abibas</NavLink></div>
                 </div>
                 <div className={styles.content}>
                     <Routes>
