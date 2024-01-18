@@ -5,7 +5,7 @@ import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
-import styled from "styled-components";
+import {S} from "./components/pages/_styles"
 
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <NavWrapper><NavLink to="/pageOne">Adidas</NavLink></NavWrapper>
-                    <NavWrapper><NavLink to="/pageTwo">Puma</NavLink></NavWrapper>
-                    <NavWrapper><NavLink to={"/PageThree"}>Abibas</NavLink></NavWrapper>
+                    <S.NavWrapper><NavLink to="/pageOne">Adidas</NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to="/pageTwo">Puma</NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={"/PageThree"}>Abibas</NavLink></S.NavWrapper>
                 </div>
                 <div className={styles.content}>
                     <Routes>
@@ -39,21 +39,3 @@ function App() {
 
 export default App;
 
-const NavWrapper = styled.div`
-  margin-left: 10px;
-  font-size: 20px;
-
-  & > a {
-    text-decoration: none;
-    color: black;
-  }
-
-  & > a.active {
-    text-decoration: none;
-    color: #61dafb;
-  }
-
-  & > a:hover {
-    color: cadetblue;
-  }
-`
