@@ -20,6 +20,7 @@ function App() {
                         <Route path="/pageOne" element={<PageOne/>}/>
                         <Route path="/pageTwo" element={<PageTwo/>}/>
                         <Route path="/PageThree" element={<PageThree/>}/>
+                        <Route path="/*" element={<Error404/>}/>
                     </Routes>
                 </div>
             </div>
