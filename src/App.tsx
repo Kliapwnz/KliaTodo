@@ -5,6 +5,7 @@ import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
+import styled from "styled-components";
 
 
 function App() {
@@ -50,3 +51,20 @@ function App() {
 
 
 export default App;
+
+const NavWrapper= styled.div`
+ margin-left:10px;
+  font-size: 20px;
+  
+  & > a {
+    text-decoration: none;
+    color: black;
+  }
+  & > a.active {
+    text-decoration: none;
+    color: #61dafb;
+  }
+  & > a:hover {
+    color: cadetblue;
+  }
+`
