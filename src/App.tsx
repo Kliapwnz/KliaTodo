@@ -4,7 +4,7 @@ import {PageOne} from "./components/pages/PageOne";
 import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -20,7 +20,8 @@ function App() {
                         <Route path="/pageOne" element={<PageOne/>}/>
                         <Route path="/pageTwo" element={<PageTwo/>}/>
                         <Route path="/PageThree" element={<PageThree/>}/>
-                        <Route path="/*" element={<Error404/>}/>
+                        <Route path="/error404" element={<Error404/>}/>
+                        <Route path="/*" element={<Navigate to={"/error404"}/>}/>
                     </Routes>
                 </div>
             </div>
