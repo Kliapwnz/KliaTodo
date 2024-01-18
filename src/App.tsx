@@ -4,7 +4,7 @@ import {PageOne} from "./components/pages/PageOne";
 import {PageTwo} from "./components/pages/PageTwo";
 import {PageThree} from "./components/pages/PageThree";
 import {Error404} from "./components/pages/Error404";
-import {Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -17,9 +17,9 @@ function App() {
                 </div>
                 <div className={styles.content}>
                     <Routes>
-                        <PageOne/>
-                        <PageTwo/>
-                        <PageThree/>
+                        <Route path="/pageOne" element={<PageOne/>}/>
+                        <Route path="/pageTwo" element={<PageTwo/>}/>
+                        <Route path="/PageThree" element={<PageThree/>}/>
                     </Routes>
                 </div>
             </div>
