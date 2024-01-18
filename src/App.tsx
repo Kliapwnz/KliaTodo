@@ -18,7 +18,6 @@ function App() {
                     <PageOne/>
                     <PageTwo/>
                     <PageThree/>
-                    <Error404/>
                 </div>
             </div>
             <div className={styles.footer}>abibas 2023</div>
