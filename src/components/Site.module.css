@@ -34,3 +34,11 @@
     text-align: center;
     color: white;
 }
+.navLink {
+    text-decoration: none;
+    color: black;
+}
+.nav a.active {
+    color: lime;
+    text-decoration: underline;
+}
