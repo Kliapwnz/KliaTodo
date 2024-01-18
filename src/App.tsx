@@ -16,18 +16,18 @@ function App() {
                 <div className={styles.nav}>
                     <div><NavLink
                         to="/pageOne"
-                        className={({isActive}) =>isActive ? styles.active: styles.navLink}
+                        className={({isActive}) => isActive ? styles.active : styles.navLink}
 
                     >
                         Adidas</NavLink></div>
                     <div><NavLink
                         to="/pageTwo"
-                        className={({isActive}) =>isActive ? styles.active: styles.navLink}
+                        className={({isActive}) => isActive ? styles.active : styles.navLink}
                     >
                         Puma</NavLink></div>
                     <div><NavLink
                         to={"/PageThree"}
-                        className={({isActive}) =>isActive ? styles.active: styles.navLink}
+                        className={({isActive}) => isActive ? styles.active : styles.navLink}
                     >
                         Abibas</NavLink></div>
                 </div>
@@ -52,18 +52,20 @@ function App() {
 
 export default App;
 
-const NavWrapper= styled.div`
- margin-left:10px;
+const NavWrapper = styled.div`
+  margin-left: 10px;
   font-size: 20px;
-  
+
   & > a {
     text-decoration: none;
     color: black;
   }
+
   & > a.active {
     text-decoration: none;
     color: #61dafb;
   }
+
   & > a:hover {
     color: cadetblue;
   }
